@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using tabuleiro;
+using xadrez;
 
 namespace tabuleiro
 {
@@ -42,9 +43,20 @@ namespace tabuleiro
                 throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
 
-
             pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
+        }
+
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.Posicao = null;
+            pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
         }
 
         public bool posicaoValida(Posicao pos)

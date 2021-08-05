@@ -19,5 +19,10 @@ namespace tabuleiro
             this.Tab = tab;
             this.QteMovimento = 0;
         }
+
+        public void incrementarQteMov()
+        {
+            QteMovimento++;
+        }
     }
 }

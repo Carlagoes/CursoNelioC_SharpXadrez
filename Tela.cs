@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using tabuleiro;
+using xadrez;
+
 
 namespace CursoNelio17Xadrez
 {
@@ -28,6 +30,14 @@ namespace CursoNelio17Xadrez
             }
             Console.WriteLine("  a b c d e f g h");
 
+        }
+
+        public static PosicaoXadrez lerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char linha = s[0];
+            int coluna = int.Parse(s[1] + "");
+            return new PosicaoXadrez(linha, coluna);
         }
         public static void imprimirPeca(Peca peca)
         {
