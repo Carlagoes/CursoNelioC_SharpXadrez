@@ -46,6 +46,9 @@ namespace CursoNelio17Xadrez
                     }
 
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
+
                                 
             }
             catch(TabuleiroException e)
