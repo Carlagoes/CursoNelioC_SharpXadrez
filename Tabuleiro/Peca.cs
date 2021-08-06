@@ -5,7 +5,7 @@ using tabuleiro;
 
 namespace tabuleiro
 {
-    class Peca
+    abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; set; }
@@ -19,10 +19,11 @@ namespace tabuleiro
             this.Tab = tab;
             this.QteMovimento = 0;
         }
-
         public void incrementarQteMov()
         {
             QteMovimento++;
         }
+        public abstract bool[,] movimentosPossiveis();
+        
     }
 }
