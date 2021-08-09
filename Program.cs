@@ -37,7 +37,7 @@ namespace CursoNelio17Xadrez
                         Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
                         partida.validarPosicaoDestino(origem, destino);
 
-                        partida.executaMovimento(origem, destino);
+                        partida.realizaJogada(origem, destino);
                     }
                     catch(TabuleiroException e)
                     {
@@ -54,14 +54,10 @@ namespace CursoNelio17Xadrez
             catch(TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
-                Console.ReadLine();
+                
             }
 
             Console.ReadLine();
-
-
-
-
 
         }
     }

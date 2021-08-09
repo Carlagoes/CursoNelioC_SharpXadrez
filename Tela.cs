@@ -42,6 +42,8 @@ namespace CursoNelio17Xadrez
             ConsoleColor aux = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Yellow;
             imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
+            Console.ForegroundColor = aux;
+            Console.WriteLine();
         }
 
         public static void imprimirConjunto(HashSet<Peca> conjunto)

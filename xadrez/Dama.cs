@@ -41,7 +41,7 @@ namespace xadrez
             }
 
             //direita
-            pos.definirValores(Posicao.Linha, Posicao.Coluna - 1);
+            pos.definirValores(Posicao.Linha, Posicao.Coluna + 1);
             while (Tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
@@ -49,7 +49,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(pos.Linha, pos.Coluna - 1);
+                pos.definirValores(pos.Linha, pos.Coluna + 1);
             }
             //acima
             pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);

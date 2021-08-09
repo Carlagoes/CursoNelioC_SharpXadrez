@@ -69,7 +69,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.Linha = pos.Linha + 1;
+                pos.Linha = pos.Linha - 1;
             }
 
             return mat;

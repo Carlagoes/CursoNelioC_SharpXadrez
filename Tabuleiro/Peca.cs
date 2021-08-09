@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using tabuleiro;
+using xadrez;
 
 namespace tabuleiro
 {
@@ -10,7 +11,7 @@ namespace tabuleiro
         public Posicao Posicao { get; set; }
         public Cor Cor { get; set; }
         public int QteMovimento { get; protected set; }
-        public Tabuleiro Tab { get; set; }
+        public Tabuleiro Tab { get; protected set; }
 
         public Peca(Tabuleiro tab, Cor cor)
         {
